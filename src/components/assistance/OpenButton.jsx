@@ -4,9 +4,9 @@ import { MdCastForEducation } from "react-icons/md";
 const OpenButton = () => {
   return (
     <>
-      <div className="bg-orange-500 px-4 py-2 rounded-full text-white font-bold flex justify-center items-center space-x-2">
+      <div className="bg-blue-500 px-4 py-2 rounded-full text-white font-semibold flex justify-center items-center space-x-2">
         <MdCastForEducation />
-        <button>Learning Assistance</button>
+        <button>Assistance</button>
       </div>
     </>
   );

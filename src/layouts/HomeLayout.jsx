@@ -1,16 +1,21 @@
 import React from "react";
-import OpenButton from "../components/chatgpt/OpenButton";
+import OpenButton from "../components/assistance/OpenButton";
+import Navbar from "../components/core/Navbar";
+import NavbarBottom from "../components/core/NavbarBottom";
 
 const HomeLayout = () => {
   return (
     <>
-      <div className=" relative w-full h-[100vh] bg-blue-50 ">
+      <div className="  w-full h-[100vh] bg-blue-50 ">
+        <Navbar />
+        <NavbarBottom />
         <div>
-          <div className="bg-red-400 h-[70vh]"> hello</div>
-          <div className="bg-blue-500 h-[30vh] "> lover</div>
-        </div>
-        <div className="absolute bottom-2 right-4 ">
-          <OpenButton />
+          <div className=" h-[75vh]"> .. </div>
+          <div className="bg-gray-700 h-[200px] relative">
+            <div className="absolute bottom-8 right-4 ">
+              <OpenButton />
+            </div>
+          </div>
         </div>
       </div>
     </>
