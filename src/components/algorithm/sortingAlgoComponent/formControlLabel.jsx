@@ -15,11 +15,16 @@ export default function SwitchLabels(props) {
     <FormGroup row>
       <FormControlLabel
         control={
-          <Switch
-            checked={state.checkedA}
-            onChange={handleChange}
-            name="checkedA"
-          />
+          <div className="flex flex-col">
+            <label className="cursor-pointer label">
+              <input
+                onChange={handleChange}
+                type="checkbox"
+                className="toggle toggle-primary"
+                checked
+              />
+            </label>
+          </div>
         }
         label="Duo"
         disabled={props.disable}

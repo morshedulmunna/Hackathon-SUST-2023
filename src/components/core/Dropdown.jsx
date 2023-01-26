@@ -1,14 +1,11 @@
 import React from "react";
 
 const Dropdown = ({ onAlgoChanged, pos }) => {
-  const [state, setState] = React.useState({
-    pos: pos,
-  });
-
   const handleChange = (event) => {
-    console.log(state.pos);
-    setState(parseInt(event.target.value));
-    onAlgoChanged(state.pos, event.target.value);
+    let algo = parseInt(event.target.value);
+
+    console.log(algo);
+    onAlgoChanged(algo);
   };
 
   return (

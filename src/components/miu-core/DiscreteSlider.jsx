@@ -2,11 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 
-export default function DiscreteSlider({
-  onCountChange,
-  onSpeedChange,
-  check,
-}) {
+export default function DiscreteSlider({ changeHandler }) {
   const handleChange = (event) => {
     if (event.target.innerText === "") {
       return;
@@ -14,11 +10,8 @@ export default function DiscreteSlider({
     const num = parseInt(event.target.innerText, 10);
 
     console.log(num);
-    if (check === "speed") {
-      onSpeedChange(num);
-    } else {
-      typeof onCountChange(num);
-    }
+
+    changeHandler(num);
   };
 
   return (
