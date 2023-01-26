@@ -11,21 +11,42 @@ class NavbarBottom extends Component {
         </button>
         <div>
           <p>Number of Array</p>
-          <DiscreteSlider />
+          <DiscreteSlider
+            check="count"
+            onCountChange={this.props.handleCountChange}
+          />
         </div>
         <div>
           <p>Speed</p>
-          <DiscreteSlider />
+          <DiscreteSlider
+            check="speed"
+            onSpeedChange={this.props.onSpeedChange}
+          />
         </div>
         <div>
-          <Dropdown />
+          <Dropdown pos={0} onAlgoChanged={this.props.onAlgoChanged} />
         </div>
         <div>
-          <button className="btn btn-primary ">Visualize</button>
+          <button
+            onClick={this.props.onViusalize}
+            disabled={this.props.disable}
+            style={this.isClickable()}
+            className="btn btn-primary "
+          >
+            Visualize
+          </button>
         </div>
       </div>
     );
   }
+
+  isClickable = () => {
+    if (this.props.disable) {
+      return { cursor: "not-allowed" };
+    } else {
+      return {};
+    }
+  };
 }
 
 export default NavbarBottom;

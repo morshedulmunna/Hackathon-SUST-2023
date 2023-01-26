@@ -36,7 +36,6 @@ const Rects = ({ rects }) => {
         {rects.map((rect, index) => {
           let height = `h-[${rect.width.toString()}px]`;
 
-          console.log(height);
           return (
             <div
               className="relative h-[50vh] border-b-2 border-blue-800"
@@ -48,8 +47,6 @@ const Rects = ({ rects }) => {
                   height: rect.width,
                   width: 15,
                   background: "#000000",
-                  // float:'left',
-                  "vertical-align": "middle",
                 }}
               ></div>
             </div>

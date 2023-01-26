@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import NavbarBottom from "../../core/NavbarBottom";
 import Rects from "./rects";
 
+import { bubbleSort } from "../../../algorithm/bubbleSort";
+
 class Sort extends Component {
   state = {
-    count: 50,
+    count: 20,
     rects: [],
     rects2: [],
     doubles: false,
@@ -22,12 +24,12 @@ class Sort extends Component {
         <NavbarBottom
           // disable={this.state.isRunning}
           // onDoubleChange={this.handleDouble}
-          // onViusalize={this.handleSort}
+          onViusalize={this.handleSort}
           onRandomize={this.handleRandomize}
           // onRefresh={this.handleRefresh}
-          // onCountChange={this.handleCountChange}
+          onCountChange={this.handleCountChange}
           onAlgoChanged={this.handleAlgoChanged}
-          // onSpeedChange={this.handleSpeedChanged}
+          onSpeedChange={this.handleSpeedChanged}
         />
         <div className=" justify-content-center">
           <Rects rects={this.state.rects} />
